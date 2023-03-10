@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 7 demo</title>
+        <!-- mapbox API -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
+        <!-- mapbox geocoder plugin -->
+        <script
+            src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet"
+            href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+            type="text/css">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+<!--NAVIGATION -->
+<nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Popular Filming Locations in Toronto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Link to Story Map of Popular Filming Locations -->
+          <li class="nav-item">
+            <a class="nav-link" href="https://utoronto.maps.arcgis.com/apps/MapTour/index.html?appid=ce23b2e476d84e67aae2bec662571ad4" target="_blank">Story Map of Popular Filming Locations in Toronto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Mapbox Map in Body -->
+<div id='map' class='map'></div>
+
+<!-- Navigation Elements -->
+   <div class='map-overlay-search'>
+    <label>Search here</label>
+    <div id="geocoder" class="geocoder"></div>
+    <button type="button" class="btn btn-primary btn-sm" id="returnbutton">Return to Original View</button>
+    </div>
+
+<!-- LEGEND -->
+<div class='legend'>
+  <div class='legend-title'>Locations</div>
+  <div class='legend-scale'>
+    <ul class='legend-labels'>
+      <li><span style='background:#b811eb;'></span>University of Toronto</li>
+      <li><span style='background:#00ffff;'></span>Casa Loma</li>
+      <li><span style='background:#001aff;'></span>Elgin and Winter Garden Theatre</li>
+      <li><span style='background:#91ff00;'></span>Toronto City Hall</li>
+      <li><span style='background:#ff0000;'></span>Yonge-Dundas Square</li>
+      <li><span style='background:#6d0ee9;'></span>Union Square</li>
+      <li><span style='background:#e7f7be;'></span>Toronto Reference Library</li>
+    </ul>
+</div>
+  
+  
+<!-- Script Source -->
+<script src="script.js"></script>
+
+</body> 
+</html>
